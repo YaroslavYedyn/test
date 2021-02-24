@@ -1,0 +1,22 @@
+.item {
+    margin: 5px;
+    display: flex;
+    min-width: 700px;
+    width: 70%;
+    height: 50px;
+    background: cadetblue;
+}
+
+.btn {
+    margin-left: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    outline: none;
+    text-decoration: none;
+    border: none;
+}
+
+.btn:focus {
+    border: 1px solid #030303;
+}
