@@ -4,7 +4,7 @@ import styles from './create.module.css'
 export const Create = () => {
     const [newNote, setNewNote] = useState({name: '', text: '', status: 'have', priority: ''})
     const localNotes = JSON.parse(localStorage.getItem('notes'))
-    const notes = localNotes.length > 0 ? localNotes : [];
+    const notes = !!localNotes ? localNotes : [];
 
 
     const submit = (e) => {
@@ -17,11 +17,11 @@ export const Create = () => {
 
     return (
         <main>
-            <form onSubmit={(e) => submit(e)}>
+            <form className={styles.createForm} onSubmit={(e) => submit(e)}>
                 <label>Create note</label>
-                <input name='name' type="text" placeholder='Enter name '
+                <input className={styles.createInput} name='name' type="text" placeholder='Enter name '
                        onChange={(e) => setNewNote({...newNote, name: e.target.value})}/>
-                <input name='text' type="text" placeholder='Enter text'
+                <input className={styles.createInput} name='text' type="text" placeholder='Enter text'
                        onChange={(e) => setNewNote({...newNote, text: e.target.value})}/>
                 <div className={styles.status}>
                     <p>Status Note</p>
@@ -42,7 +42,7 @@ export const Create = () => {
                         <option value="5">5</option>
                     </select>
                 </div>
-                <input type="submit" value='CREATE'/>
+                <input className={styles.createInput} type="submit" value='CREATE'/>
             </form>
         </main>
     )

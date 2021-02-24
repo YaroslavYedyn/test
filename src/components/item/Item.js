@@ -5,11 +5,16 @@ export const Item = ({item, id, notes, removeNote, update}) => {
 
     return (
         <div className={styles.item}>
-            {item.name}
-            {item.text}
-            {id}
-            <button className={styles.btn} onClick={() => removeNote(id)}>remove</button>
-            <button className={styles.btn} onClick={() => update(item)}>update</button>
+            <div className={styles.note}>
+                <a>NAME:{item.name}</a>
+                <a> TEXT: {item.text}</a>
+                <a> STATUS: {item.text}</a>
+                <a> PRIORITY: {item.text}</a>
+            </div>
+            <div>
+                <button className={styles.btn} onClick={() => removeNote(id)}>remove</button>
+                <button className={styles.btn} onClick={() => update(item)}>update</button>
+            </div>
         </div>
     )
 }

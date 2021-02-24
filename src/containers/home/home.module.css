@@ -1,6 +1,6 @@
 main {
     display: flex;
-    flex-direction: column;
+    justify-content: space-around;
     min-height: 100vh;
     height: 100%;
     width: 100%;
@@ -8,7 +8,7 @@ main {
 }
 
 .listWrapper {
-    width: 100%;
+    width: 800px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -21,8 +21,41 @@ main {
 }
 
 .update {
-    position: absolute;
-    width: 500px;
-    height: 500px;
+    width: 300px;
+    height: 600px;
     background: #d21515;
+}
+
+.updateForm {
+    margin-top: 10px;
+    width: 300px;
+    height: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.priority, .status {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    margin-top: 15px;
+}
+.updateInput{
+    margin-top: 15px;
+    text-decoration: none;
+    outline: none;
+    border: none;
+    width: 180px;
+    height: 30px;
+    border-radius: 20px;
+}
+.btn{
+    margin-top: 15px;
+    width: 120px;
+    height: 30px;
+    background: oldlace;
+    border: none;
 }
